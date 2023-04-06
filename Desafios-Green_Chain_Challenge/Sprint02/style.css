@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --text-color: #FFFFFF;
+  --btn-text-color: #0D3B66;
+  --text-description-color: #000000;
+  --text-h2-desciption-color: #0D3B66;
+
+  --bg-header-color: #E44449;
+  --bg-main-color: #F15156;
+  --bg-modal-color: #b0b0b0;
+  --btn-bg-color: #FFFFFF;
+  --bg-decriptions-color: #FFFFFF;
+  --bg-description-color: #FDECED;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+section {
+  margin: 0 auto;
+  position: relative;
+}
+
+header {
+  background: var(--bg-header-color);
+  width: 100%;
+  height: 8rem;
+  padding: 2rem;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header,
+main {
+  color: #FFFFFF;
+}
+
+
+.open-menu,
+.close-menu {
+  border: none;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+main {
+  background: var(--bg-main-color);
+  color: var();
+  height: 80vh;
+}
+
+.friends {
+  height: 5rem;
+  width: 17rem;
+  margin: 0 2rem;
+  padding-top: 4rem;
+}
+
+.img-friends {
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.img-friends> :nth-child(1) {
+  z-index: 1;
+}
+
+.img-friends> :nth-child(2) {
+  position: absolute;
+  z-index: 2;
+  left: 2rem;
+}
+
+.img-friends> :nth-child(3) {
+  position: absolute;
+  z-index: 3;
+  left: 4rem;
+}
+
+.img-friends> :nth-child(4) {
+  position: absolute;
+  z-index: 4;
+  left: 6rem;
+}
+
+.friends p {
+  margin-top: 4rem;
+}
+
+.friends p strong {
+  font-weight: 800;
+}
+
+.content h1 {
+  font-size: 4rem;
+  padding: 10rem 2rem;
+  width: 30rem;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.info-pet {
+  width: 100%;
+  height: 26rem;
+  background: url('./assets/caramelo-mobile.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.content .btn-acesse {
+  position: absolute;
+  color: var(--btn-text-color);
+  font-size: 1.4rem;
+  font-weight: 800;
+  width: 24rem;
+  height: 5rem;
+  background: var(--btn-bg-color);
+  padding: 0.8rem 6.2rem;
+  border: none;
+  border-radius: 1.2rem;
+  margin-top: 19rem;
+  left: 12rem;
+}
+
+.hide {
+  display: none;
+}
+
+
+.modal-menu {
+  background: #a3a5a7;
+  height: 100vh;
+  margin-top: -105rem;
+}
+
+.modal-menu .modal-page {
+  background: var(--bg-header-color);
+  border-radius: 0px 0px 20px 20px;
+  width: 36rem;
+  height: 28rem;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+.modal-menu .header {
+  display: flex;
+  height: 8rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 1);
+  padding: 2rem;
+}
+
+.modal-menu .header .btn-close-modal {
+  width: 12rem;
+  height: 3rem;
+  position: relative;
+  left: 8rem;
+}
+
+.modal-menu .nav {
+  color: var(--text-color);
+  display: flex;
+  padding: 0 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.modal-menu .nav li {
+  list-style: none;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  opacity: 0.5;
+}
+
+.modal-menu .nav li:hover {
+  opacity: 1;
+}
+
+.descriptions {
+  background: var(--bg-decriptions-color);
+}
+
+.descriptions h2 {
+  color: var(--text-h2-desciption-color);
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 4rem 2rem 2rem;
+  margin-top: 3rem;
+}
+
+.description {
+  width: 32rem;
+  height: 20rem;
+  background: var(--bg-description-color);
+  border-radius: 2rem;
+  border: 1px solid rgba(241, 81, 86, 0.3);
+  margin: 0 auto 1rem;
+  opacity: 0.5;
+}
+
+
+.description p {
+  padding: 2rem;
+  color: var(--text-description-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+
+}
+
+footer {
+  position: fixed;
+  width: 36rem;
+  height: 35rem;
+}
+
+@media(min-width: 600px) {
+
+  body {
+    background: #1E1E1E;
+  }
+
+  .page {
+    width: 144rem;
+    height: 82rem;
+    margin: 0 auto;
+  }
+
+  header {
+    background: var(--bg-main-color);
+  }
+
+  header .btn-open-modal {
+    width: 42%;
+    z-index: 1;
+  }
+
+
+  header,
+  .friends,
+  .content {
+    padding: 10rem;
+  }
+
+  .friends {
+    width: 60rem;
+    height: 12rem;
+    display: flex;
+    margin-top: -12rem;
+    left: -2rem;
+  }
+
+  .friends p {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    position: absolute;
+    left: 20rem;
+    top: 7rem;
+  }
+
+  .content {
+    margin-top: -21rem;
+    left: -48rem;
+    width: 52rem;
+  }
+
+  .content h1 {
+    font-size: 7.2rem;
+    font-weight: 700;
+    width: 55rem;
+  }
+
+  .hide-mobile {
+    display: flex;
+  }
+
+  .content p {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    position: relative;
+    left: 2rem;
+    width: 41rem;
+  }
+
+  .info-pet {
+    width: 125%;
+    height: 100%;
+    background: url(./assets/caramelo-desktop.png);
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: absolute;
+    left: 81rem;
+    top: -2rem;
+  }
+
+  .content .btn-acesse {
+    margin-top: 61rem;
+    width: 49rem;
+    height: 7rem;
+    left: 5rem;
+  }
+
+  .modal-menu {
+    margin-top: -82rem;
+  }
+}

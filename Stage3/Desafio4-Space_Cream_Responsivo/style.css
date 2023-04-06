@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+.body {
+  font-family: 'Staatliches';
+  background: #EFF1FF;
+}
+
+header {
+  background: #8E9AAF;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo>img {
+  margin-top: 3.7rem;
+}
+
+.title>h1 {
+  font-size: 4rem;
+  line-height: 3.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  letter-spacing: 0.05em;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  background: #CBC0D3;
+  width: 100%;
+
+  margin: 2.9rem 0;
+  padding: .8rem;
+}
+
+.text {
+  background: #FFFFFF;
+}
+
+.text>p {
+  font-family: 'Palanquin';
+  font-size: 2.0rem;
+  line-height: 2.5rem;
+
+
+  display: flex;
+  text-align: center;
+
+  color: #23053A;
+  margin-top: 1.4rem;
+
+  padding: 1.4rem 3.8rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8rem 3.2rem 6rem;
+}
+
+
+.cards {
+  display: grid;
+  gap: 3.2rem;
+  margin-top: 5rem;
+}
+
+.cards .card {
+  position: relative;
+  width: 32rem;
+  height: fit-content;
+}
+
+.cards .card span {
+  font-family: 'Staatliches';
+  font-size: 2rem;
+  color: #4a4e69;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  background: #feeafa;
+  border-radius: 2rem;
+  width: 11.2rem;
+  text-align: center;
+  line-height: 3.4rem;
+}
+
+.cards .card img {
+  border-radius: 2rem;
+
+}
+
+.cards .card img:hover {
+  animation: fadein 5s;
+}
+
+.cards .tam-1 img {
+  width: 32rem;
+  height: 25rem;
+}
+
+.cards .tam-2 img {
+  width: 32rem;
+  height: 45rem;
+}
+
+.cards .hide {
+  display: none;
+}
+
+
+footer {
+  display: none;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media (min-width: 40em) {
+  .text {
+    background: #8E9AAF;
+  }
+
+  .text>p {
+    color: #FFFFFF;
+    font-size: 2.4rem;
+    line-height: 2rem;
+    padding: 5rem;
+  }
+
+  header {
+    width: 38rem;
+    height: 100vh;
+    margin: 0;
+  }
+
+  span {
+    display: none;
+  }
+
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main {
+    position: absolute;
+    left: 50rem;
+    margin-top: -90rem;
+    gap: 3.2rem;
+  }
+
+  .cards .hide {
+    display: grid;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-areas: "A B C"
+      "D E F";
+    gap: 3.2rem;
+    padding: 6.4rem 8rem;
+  }
+
+  .cards div:nth-child(1) {
+    grid-area: A;
+  }
+
+  .cards div:nth-child(2) {
+    grid-area: B;
+  }
+
+  .cards div:nth-child(5) {
+    grid-area: C;
+    display: block;
+  }
+
+  .cards div:nth-child(4) {
+    grid-area: D;
+  }
+
+  .cards div:nth-child(3) {
+    grid-area: E;
+  }
+
+  .cards div:nth-child(6) {
+    grid-area: F;
+    display: block;
+  }
+
+  .cards .tam-1 img {
+    width: 22rem;
+    height: 15rem;
+  }
+
+  .cards .tam-2 img {
+    width: 22rem;
+    height: 35rem;
+    margin-top: -10rem;
+  }
+
+  .cards .img-top {
+    margin-top: -10rem;
+  }
+
+  footer {
+    display: flex;
+    font-family: 'Open Sans';
+
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+
+
+    text-align: center;
+
+    color: #4A4E69;
+
+    margin: -5rem 15rem 4.6rem 95rem;
+  }
+
+  footer a {
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    color: #4A4E69;
+  }
+}
