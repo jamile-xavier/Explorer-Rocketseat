@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-h2: 'Montserrat';
+  --ff-p: 'DM Sans';
+  --ff-msg: 'Dancing Script';
+  --ff-btn: 'DM Sans';
+  --fs-h2: 2.4rem;
+  --fs-p: 1.5rem;
+  --fs-msg: 2.4rem;
+  --fs-btn: 1.5rem;
+  --fc-h2: #34355B;
+  --fc-p: #34355B;
+  --fc-msg: #000000;
+  --fc-btn: #FFFFFF;
+  --bg-btn: #FF9500;
+}
+
+body {
+  background: linear-gradient(45deg, #190361 0%, #BB00FF 100%) no-repeat;
+  height: 100vh;
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+.screen1 {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background: #FFFFFF;
+  width: 43rem;
+  height: 43rem;
+  margin: 29rem auto;
+
+  border-radius: 0.5rem;
+}
+
+.screen1 h2 {
+  font-family: var(--ff-h2);
+  font-size: var(--fs-h2);
+  line-height: 2.9rem;
+  color: var(--fc-h2);
+
+  width: 26rem;
+}
+
+.screen1 p {
+  font-family: var(--ff-p);
+  font-size: var(--fs-p);
+  color: var(--fc-p);
+  line-height: 2rem;
+  margin: 2rem 0;
+}
+
+.screen1 img {
+  width: 30rem;
+  height: 20rem;
+}
+
+.hide {
+  display: none;
+}
+
+.screen2 {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background: #FFFFFF;
+  width: 43rem;
+  height: 56rem;
+  margin: 29rem auto;
+
+  border-radius: 0.5rem;
+}
+
+.screen2 h2 {
+  font-family: var(--ff-h2);
+  font-size: var(--fs-h2);
+  line-height: 2.9rem;
+  color: var(--fc-h2);
+
+  width: 26rem;
+}
+
+.screen2 p {
+  font-family: var(--ff-msg);
+  font-size: var(--fs-msg);
+  color: var(--fc-msg);
+  line-height: 2rem;
+  margin: 2rem 0;
+
+  background: #E4EDF1;
+  padding: 1rem;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+}
+
+.screen2 img {
+  width: 30rem;
+  height: 20rem;
+}
+
+.screen2 button {
+  font-family: var(--ff-btn);
+  font-size: var(--fs-btn);
+  color: var(--fc-btn);
+
+  background: var(--bg-btn);
+  border: none;
+  border-radius: 0.4rem;
+  padding: 1.6rem;
+  margin-top: 1.7rem;
+
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
