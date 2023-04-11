@@ -65,8 +65,12 @@ body {
   height: 20rem;
 }
 
-.hide {
-  display: none;
+.screen1 img:hover {
+  cursor: pointer;
+  animation-name: cookie;
+  animation-direction: alternate;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
 }
 
 .screen2 {
@@ -120,6 +124,27 @@ body {
   border-radius: 0.4rem;
   padding: 1.6rem;
   margin-top: 1.7rem;
+
+}
+
+.hide {
+  display: none;
+}
+
+
+
+@keyframes cookie {
+  0% {
+    transform: translate(5%, 1px);
+  }
+
+  50% {
+    transform: translate(-10%, 1px);
+  }
+
+  100% {
+    transform: translate(0%, 1px);
+  }
 
 }
 
