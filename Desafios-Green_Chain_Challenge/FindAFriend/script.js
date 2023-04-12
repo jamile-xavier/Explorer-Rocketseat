@@ -1,4 +1,3 @@
-let page = document.querySelector('.page')
 let modal = document.querySelector('.modal-menu')
 let openMenu = document.querySelector('.open-menu')
 let closeMenu = document.querySelector('.close-menu')
@@ -17,5 +16,4 @@ function openModal() {
 function closeModal() {
   modal.classList.add('hide')
   page.style.opacity = 1;
-
 }
