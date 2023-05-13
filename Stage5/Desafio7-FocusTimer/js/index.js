@@ -10,22 +10,27 @@ const buttonSoundFireplace = document.querySelector(".button-fireplace");
 
 const timeDisplay = document.querySelector(".time");
 const minutesDisplay = document.querySelector(".minutes");
-const secondsDisplay = document.querySelector(".seconds")
+const secondsDisplay = document.querySelector(".seconds");
+let timeOutId = null;
 
+const musics = [
+  { id: 'soundFlorest', music: new Audio("../assets/Floresta.wav") },
+  {
+    id: 'soundRain', music: new Audio("../assets/Chuva.wav")
+  },
+  { id: 'soundCoffeeShop', music: new Audio("../assets/Cafeteria.wav") },
+  { id: 'soundFireplace', music: new Audio("../assets/Lareira.wav") }
+]
 
-const soundFlorest = new Audio("../assets/Floresta.wav");
-const soundRain = new Audio("../assets/Chuva.wav");
-const soundCoffeeShop = new Audio("../assets/Cafeteria.wav");
-const soundFireplace = new Audio("../assets/Lareira.wav");
 
 function updateDisplay(minutes, seconds) {
 
-  minutesDisplay.textContent = String(minutes).padStart(2, "0")
-  secondsDisplay.textContent = String(seconds).padStart(2, "0")
+  minutesDisplay.textContent = String(minutes).padStart(2, "0");
+  secondsDisplay.textContent = String(seconds).padStart(2, "0");
 }
 
 function countDown() {
-  setTimeout(function () {
+  timeOutId = setTimeout(function () {
     let seconds = Number(secondsDisplay.textContent);
     let minutes = Number(minutesDisplay.textContent);
     let isFinished = minutes <= 0 && seconds <= 0
@@ -38,7 +43,7 @@ function countDown() {
     }
 
     if (seconds <= 0) {
-      seconds = 2
+      seconds = 60
       --minutes
     }
 
@@ -48,50 +53,49 @@ function countDown() {
   }, 1000)
 }
 
+function addRemoveTime(operacao) {
+  let time = Number(minutesDisplay.textContent)
 
-function musicFlorest() {
-  soundRain.pause();
-  soundCoffeeShop.pause();
-  soundFireplace.pause();
-  soundFlorest.play();
-  soundFlorest.loop = true;
+  updateDisplay(!operacao ? time += 5 : time -= 5, "00")
 }
 
-function musicRain() {
-  soundFlorest.pause();
-  soundCoffeeShop.pause();
-  soundFireplace.pause();
-  soundRain.play();
-  soundRain.loop = true;
-}
-
-function musicCoffeeShop() {
-  soundFlorest.pause();
-  soundRain.pause();
-  soundFireplace.pause();
-  soundCoffeeShop.play();
-  soundCoffeeShop.loop = true;
-}
-
-function musicFireplace() {
-  soundFlorest.pause();
-  soundRain.pause();
-  soundCoffeeShop.pause()
-  soundFireplace.play();
-  soundFireplace.loop = true;
+function playMusic(musicName) {
+  let song = musics.filter(x => x.id == musicName)[0]
+  musics.forEach(music => {
+    if (music.id != musicName) {
+      music.music.pause()
+    }
+  })
+  song.music.play();
+  song.music.loop = true;
 }
 
 buttonPlay.addEventListener('click', function () {
   countDown();
 });
-buttonStop.addEventListener('click', function () { });
-buttonPlus.addEventListener('click', function () { });
-buttonLess.addEventListener('click', function () { });
+buttonStop.addEventListener('click', function () {
+  clearTimeout(timeOutId)
+  updateDisplay("25", "00")
+});
+buttonPlus.addEventListener('click', function () {
+  addRemoveTime();
+});
+buttonLess.addEventListener('click', function () {
+  addRemoveTime(true);
+});
 
 
-buttonSoundFlorest.addEventListener('click', musicFlorest);
-buttonSoundRain.addEventListener('click', musicRain);
-buttonSoundCoffeeShop.addEventListener('click', musicCoffeeShop);
-buttonSoundFireplace.addEventListener('click', musicFireplace);
+buttonSoundFlorest.addEventListener('click', function () {
+  playMusic('soundFlorest')
+});
+buttonSoundRain.addEventListener('click', function () {
+  playMusic("soundRain")
+});
+buttonSoundCoffeeShop.addEventListener('click', function () {
+  playMusic("soundCoffeeShop")
+});
+buttonSoundFireplace.addEventListener('click', function () {
+  playMusic("soundFireplace")
+});
 
 
