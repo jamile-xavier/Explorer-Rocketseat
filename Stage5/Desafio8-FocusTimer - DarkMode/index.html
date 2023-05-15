@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="./js/index.js" type="module" defer></script>
+</head>
+
+<body class="body">
+  <main>
+    <div class="imgDarkMode ">
+      <button class="btn-lightMode"><img src="./assets/sun.svg" alt="imagem de um sol"></button>
+      <button class="btn-darkMode hide"><img src="./assets/moon.svg" alt="imagem de uma lua"></button>
+    </div>
+    <div class="content">
+      <div class="timer">
+        <div class="time">
+          <span class="minutes dkMode">25</span>
+          <span class="separator">:</span>
+          <span class="seconds dkMode">00</span>
+        </div>
+        <div class="buttons">
+          <button class="button-play"><img class=" controls" src="./assets/play.svg" alt="Símbolo de play"></button>
+          <button class="button-stop"> <img class=" controls" src="./assets/stop.svg" alt="Símbolo de stop"></button>
+          <button class="button-plus"><img class=" controls" src="./assets/plus.svg" alt="Símbolo de mais"></button>
+          <button class="button-less"><img class=" controls" src="./assets/less.svg" alt="Símbolo de menos"></button>
+        </div>
+      </div>
+
+      <div class="musics">
+        <button class="button-florest"><img src="./assets/florest.svg" alt="Imagem de uma árvore">
+          <input class="volume" type="range" min="0" max="100" value="50"></button>
+        <button class="button-rain"><img src="./assets/rain.svg" alt="Imagem de uma nuvem com chuva">
+          <input class="volume" type="range" min="0" max="100" value="50"></button>
+        <button class="button-coffeeShop"> <img src="./assets/coffeeShop.svg" alt="Imagem de uma loja">
+          <input class="volume" type="range" min="0" max="100" value="50"></button>
+        <button class="button-fireplace"><img src="./assets/fireplace.svg" alt="Imagem de uma lareira">
+          <input class="volume" type="range" min="0" max="100" value="50"></button>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
