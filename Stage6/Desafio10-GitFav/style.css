@@ -1,0 +1,128 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif ;
+}
+
+body {
+    background-color: #000000;
+    font-size: 1.6rem;
+}
+
+#app {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem 0;
+   }
+
+ header img {
+    width: 18.6rem;
+    height: 3.2rem;;
+   }
+
+   header button {
+    cursor: pointer;
+   }
+
+.search{
+    display: flex;
+    width: 64rem;
+    height: 4.8rem;
+    } 
+
+.search input {
+    color: #7C7C8A;
+    background-color: #06181C;
+    margin-right: 0.8rem;
+    padding: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    width: 46rem;
+}
+
+.search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    height: 4.8rem;
+    color: #E1E1E6;
+    background: #065E7C;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+      }
+
+.search button img{
+    width: 2.4rem;
+    height: 2.4rem;
+    padding-right:0.8rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #4A808C;
+    border-radius: 1.2rem;
+}
+
+table * {
+    font-size: 1.4rem;
+    color: #E1E1E6;
+}
+
+table th {
+background-color: #092D38;
+text-align: left;
+padding: 1.5rem;
+}
+
+table th:first-child {
+    border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+    border-top-right-radius: .4rem;
+}
+
+table tr {
+    background: rgba(74, 128, 140, 0.5);
+    border: 1px solid #4A808C;
+ }
+
+table tr:nth-child(odd) {
+    background: rgba(6, 22, 27, 0.5);
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td img{
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    padding:1rem;
+}
+
+td button{
+    background: transparent;
+    border: none;
+    color: #F75A68;
+cursor: pointer;
+}
