@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --hue: 195;
+  --color-bg: hsl(var(--hue), 91%, 25%);
+  --color-bg-paw: hsl(var(--hue), 100%, 98%);
+  --color-bg-input: hsl(0, 0%, 100%, 0.2);
+  --color-text-white: hsl(0, 0%, 100%);
+  --color-text-black: hsl(var(--hue), 6%, 8%);
+}
+
+html,
+body,
+input {
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--color-text-black);
+}
+
+body > h2 {
+  font-size: 2.4rem;
+}
+
+body > h3 {
+  font-size: 1.8rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-bg);
+  padding: 2.8rem 1.2rem;
+
+  > img {
+    background-color: var(--color-bg-paw);
+    border-radius: 50%;
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0.8rem;
+  }
+
+  > input {
+    background-color: var(--color-bg-input);
+    padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+    border-radius: 0.4rem;
+    border: none;
+    color: var(--color-text-white);
+  }
+
+  > input::placeholder {
+    color: var(--color-text-white);
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 1.2rem;
+  margin: 0.8rem 0 3.1rem 2.2rem;
+  > button {
+    background-color: var(--color-bg);
+    padding: 1.2rem;
+    border: none;
+    border-radius: 99.9rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.text {
+  > img {
+    width: 100%;
+    height: 21.9rem;
+    margin-bottom: 3.1rem;
+  }
+
+  > .title h2,
+  p {
+    margin-left: 2.2rem;
+  }
+
+  > p:last-child {
+    margin-top: 2rem;
+  }
+}
+
+.articles {
+  > h2 {
+    margin: 3.4rem 0 3.1rem 2.2rem;
+  }
+}
+
+article {
+  margin-left: 2.2rem;
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+
+  > img {
+    width: 15.1rem;
+    height: 8.4rem;
+    border-radius: 0.5rem;
+  }
+}
+
+.text-article {
+  > h2 {
+    font-size: 1.8rem;
+  }
+  > p {
+    font-size: 1.4rem;
+  }
+}
+
+footer {
+  background-color: var(--color-bg);
+  padding: 1.6rem;
+  text-align: center;
+  color: var(--color-text-white);
+}
